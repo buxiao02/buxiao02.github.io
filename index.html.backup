@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bu Xiao | AI 训练师 / AGI 探索者</title>
+    <meta name="description" content="Hi, 我是 Bu Xiao。一名 AI 训练师 / AGI 探索者，从智驾内训师到 AI 领域的进化之旅。">
+    <link rel="stylesheet" href="style.css">
+    <!-- 引入 Inter 字体 (Apple San Francisco 的开源替代) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- 主题颜色控制 -->
+    <meta name="theme-color" content="#f5f5f7" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#1d1d1f" media="(prefers-color-scheme: dark)">
+    <!-- Favicon 占位 -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header class="header">
+        <!-- 滚动进度条 -->
+        <div id="scroll-progress" class="scroll-progress"></div>
+        <nav class="nav container">
+            <a href="#" class="nav-logo">Bu Xiao</a>
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link">首页</a></li>
+                <li><a href="#story" class="nav-link">我的故事</a></li>
+                <li><a href="#lab" class="nav-link">AI 实验室</a></li>
+                <li><a href="#thoughts" class="nav-link">深度思考</a></li>
+                <li><a href="#contact" class="nav-link">联系</a></li>
+            </ul>
+            <!-- 主题切换按钮 (导航栏内) -->
+            <button id="theme-toggle" class="theme-toggle" aria-label="切换深色/浅色模式">
+                <span class="theme-toggle-sun">☀️</span>
+                <span class="theme-toggle-moon">🌙</span>
+            </button>
+            <button class="nav-toggle" aria-label="菜单切换">
+                <span class="hamburger"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero section">
+            <div class="hero-content container">
+                <h1 class="hero-title">
+                    <span class="hero-greeting">Hi, 我是</span>
+                    <span class="hero-name">Bu Xiao</span>
+                </h1>
+                <p class="hero-subtitle">AI 训练师 / AGI 探索者</p>
+                <p class="hero-description">
+                    在智驾与人工智能的交叉路口，探索下一代通用智能的可能性。
+                    <br>坚信 AI 不仅是工具，更是人类认知的延伸与协作伙伴。
+                </p>
+                <a href="#story" class="btn btn-primary">探索我的旅程</a>
+            </div>
+            <div class="hero-visual">
+                <!-- 抽象几何图形作为装饰 -->
+                <div class="blob blob-1 parallax" data-parallax-speed="0.3"></div>
+                <div class="blob blob-2 parallax" data-parallax-speed="0.5"></div>
+                <div class="blob blob-3 parallax" data-parallax-speed="0.7"></div>
+            </div>
+        </section>
+
+        <!-- My Story Section -->
+        <section id="story" class="story section">
+            <div class="container">
+                <h2 class="section-title">My Story</h2>
+                <p class="section-subtitle">从智驾内训师到 AI 领域的进化之旅</p>
+                <div class="timeline">
+                    <div class="timeline-item fade-in fade-in-delay-1">
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">起点：智驾内训师</h3>
+                            <p class="timeline-text">在自动驾驶行业，我开始接触复杂的感知与决策系统。这段经历让我深刻认识到：真正的智能不仅是算法，更是对场景的深度理解与人性化交互。</p>
+                            <span class="timeline-year">2018-2020</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item fade-in fade-in-delay-2">
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">转折：拥抱 AI 浪潮</h3>
+                            <p class="timeline-text">当大模型时代来临，我毅然转向 AI 训练与提示工程。从微调语言模型到构建智能体工作流，每一步都在解构人类思维与机器学习的边界。</p>
+                            <span class="timeline-year">2021-2023</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item fade-in fade-in-delay-3">
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">当下：AGI 探索者</h3>
+                            <p class="timeline-text">如今，我专注于 AGI 的渐进式实现路径：如何让 AI 具备更接近人类的常识、情感与创造力？这是一个没有终点的探索。</p>
+                            <span class="timeline-year">2024-Now</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills section">
+            <div class="container">
+                <h2 class="section-title">技能专长</h2>
+                <p class="section-subtitle">在 AI 与技术的交叉领域持续探索</p>
+                <div class="skills-grid">
+                    <div class="skill-card fade-in fade-in-delay-1">
+                        <div class="skill-icon">🤖</div>
+                        <h3 class="skill-title">AI 模型训练与微调</h3>
+                        <p class="skill-description">精通 Llama、Qwen、GPT 等大模型的训练、微调与部署，擅长构建定制化 AI 解决方案。</p>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                        <span class="skill-percent">90%</span>
+                    </div>
+                    <div class="skill-card fade-in fade-in-delay-2">
+                        <div class="skill-icon">🎯</div>
+                        <h3 class="skill-title">提示工程与智能体设计</h3>
+                        <p class="skill-description">深入理解思维链、少样本学习等提示技术，能够设计复杂的智能体工作流和交互系统。</p>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                        <span class="skill-percent">85%</span>
+                    </div>
+                    <div class="skill-card fade-in fade-in-delay-3">
+                        <div class="skill-icon">💻</div>
+                        <h3 class="skill-title">前端开发与响应式设计</h3>
+                        <p class="skill-description">熟练运用 HTML5、CSS3、JavaScript 构建现代 Web 应用，注重用户体验与性能优化。</p>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                        <span class="skill-percent">80%</span>
+                    </div>
+                    <div class="skill-card fade-in fade-in-delay-4">
+                        <div class="skill-icon">🎨</div>
+                        <h3 class="skill-title">UI/UX 设计与 Apple 美学</h3>
+                        <p class="skill-description">深谙 Apple 极简设计哲学，能够创建优雅、直观的用户界面，注重细节与交互体验。</p>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                        <span class="skill-percent">75%</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Lab Section -->
+        <section id="lab" class="lab section">
+            <div class="container">
+                <h2 class="section-title">AI Lab</h2>
+                <p class="section-subtitle">实验性项目与实战探索</p>
+                <div class="projects-grid">
+                    <article class="project-card fade-in fade-in-delay-1">
+                        <div class="project-image">
+                            <!-- 图片占位，实际使用时替换为项目截图 -->
+                            <div class="project-image-placeholder">🤖</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">本地大模型接入 Telegram 实战</h3>
+                            <p class="project-description">
+                                将开源 LLM（如 Llama、Qwen）部署在本地，通过自建中间件桥接 Telegram Bot，实现隐私安全的个性化 AI 助手。
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">LLM</span>
+                                <span class="tag">Telegram Bot</span>
+                                <span class="tag">本地化</span>
+                            </div>
+                            <a href="#" class="project-link" aria-label="查看项目详情">→</a>
+                        </div>
+                    </article>
+                    <article class="project-card fade-in fade-in-delay-2">
+                        <div class="project-image">
+                            <div class="project-image-placeholder">🎬</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">AI 短视频内容生成矩阵</h3>
+                            <p class="project-description">
+                                基于多模态模型（文本 → 图像 → 视频）的自动化内容生产线，探索 AI 在创意产业中的规模化应用。
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">多模态</span>
+                                <span class="tag">AIGC</span>
+                                <span class="tag">自动化</span>
+                            </div>
+                            <a href="#" class="project-link" aria-label="查看项目详情">→</a>
+                        </div>
+                    </article>
+                    <article class="project-card fade-in fade-in-delay-3">
+                        <div class="project-image">
+                            <div class="project-image-placeholder">🧠</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">智能体工作流可视化编排器</h3>
+                            <p class="project-description">
+                                一个低代码平台，允许用户通过拖拽方式构建复杂的 AI 智能体工作流，降低 AI 应用开发门槛。
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">智能体</span>
+                                <span class="tag">可视化</span>
+                                <span class="tag">低代码</span>
+                            </div>
+                            <a href="#" class="project-link" aria-label="查看项目详情">→</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section id="tech-stack" class="tech-stack section">
+            <div class="container">
+                <h2 class="section-title">技术栈</h2>
+                <p class="section-subtitle">日常使用的工具与技术生态</p>
+                <div class="tech-categories">
+                    <div class="tech-category fade-in fade-in-delay-1">
+                        <h3 class="category-title">🤖 AI/ML 工具</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag" data-level="expert">PyTorch</span>
+                            <span class="tech-tag" data-level="expert">Hugging Face</span>
+                            <span class="tech-tag" data-level="advanced">LangChain</span>
+                            <span class="tech-tag" data-level="advanced">OpenAI API</span>
+                            <span class="tech-tag" data-level="intermediate">TensorFlow</span>
+                            <span class="tech-tag" data-level="intermediate">Jupyter</span>
+                        </div>
+                    </div>
+                    <div class="tech-category fade-in fade-in-delay-2">
+                        <h3 class="category-title">💻 前端技术</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag" data-level="expert">HTML5</span>
+                            <span class="tech-tag" data-level="expert">CSS3</span>
+                            <span class="tech-tag" data-level="advanced">JavaScript</span>
+                            <span class="tech-tag" data-level="intermediate">TypeScript</span>
+                            <span class="tech-tag" data-level="intermediate">Git</span>
+                            <span class="tech-tag" data-level="advanced">GitHub Pages</span>
+                        </div>
+                    </div>
+                    <div class="tech-category fade-in fade-in-delay-3">
+                        <h3 class="category-title">🛠️ 开发工具</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag" data-level="expert">VS Code</span>
+                            <span class="tech-tag" data-level="advanced">Figma</span>
+                            <span class="tech-tag" data-level="advanced">ChatGPT</span>
+                            <span class="tech-tag" data-level="intermediate">Midjourney</span>
+                            <span class="tech-tag" data-level="intermediate">Notion</span>
+                            <span class="tech-tag" data-level="advanced">Docker</span>
+                        </div>
+                    </div>
+                    <div class="tech-category fade-in fade-in-delay-4">
+                        <h3 class="category-title">🎨 设计工具</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag" data-level="advanced">Figma</span>
+                            <span class="tech-tag" data-level="intermediate">Adobe Creative Suite</span>
+                            <span class="tech-tag" data-level="intermediate">Blender</span>
+                            <span class="tech-tag" data-level="advanced">Canva</span>
+                            <span class="tech-tag" data-level="intermediate">Sketch</span>
+                            <span class="tech-tag" data-level="advanced">Color Hunt</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-legend fade-in">
+                    <div class="legend-item">
+                        <span class="legend-dot expert"></span>
+                        <span class="legend-text">精通</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot advanced"></span>
+                        <span class="legend-text">熟练</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot intermediate"></span>
+                        <span class="legend-text">掌握</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Thoughts Section -->
+        <section id="thoughts" class="thoughts section">
+            <div class="container">
+                <h2 class="section-title">深度思考</h2>
+                <p class="section-subtitle">关于 AI、人性与未来的碎片记录</p>
+                <div class="articles-list">
+                    <article class="article-card fade-in fade-in-delay-1">
+                        <time class="article-date" datetime="2024-03-10">2024.03.10</time>
+                        <h3 class="article-title"><a href="#">为什么未来的 AI 需要有“缺陷”与性格？</a></h3>
+                        <p class="article-excerpt">
+                            完美的工具令人敬畏，但有瑕疵的伙伴才值得信赖。探讨 AI 人格化对信任建立与协作效率的影响。
+                        </p>
+                    </article>
+                    <article class="article-card fade-in fade-in-delay-2">
+                        <time class="article-date" datetime="2024-02-28">2024.02.28</time>
+                        <h3 class="article-title"><a href="#">当 AI 开始做梦：潜在空间的诗意与风险</a></h3>
+                        <p class="article-excerpt">
+                            从 StyleGAN 的“梦境”到 Stable Diffusion 的隐式创作，我们是否在教机器“想象”？这种想象将引向何方？
+                        </p>
+                    </article>
+                    <article class="article-card fade-in fade-in-delay-3">
+                        <time class="article-date" datetime="2024-01-15">2024.01.15</time>
+                        <h3 class="article-title"><a href="#">从提示工程到“心智提示”：与 AI 协作的下一阶段</a></h3>
+                        <p class="article-excerpt">
+                            超越表面指令，如何通过元认知提示让 AI 理解我们的思考过程，从而实现真正的认知协同？
+                        </p>
+                    </article>
+                </div>
+                <div class="section-footer">
+                    <a href="#" class="btn btn-secondary">查看更多思考</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+            <div class="container">
+                <h2 class="section-title">保持连接</h2>
+                <p class="section-subtitle">如果你也对 AI 的未来充满好奇，欢迎交流</p>
+                <div class="contact-links">
+                    <a href="https://www.douyin.com/user/MS4wLjABAAAAHgFbOdaQA97x7rsO6cZ5Owzgb-LI-jMJcPYK9GcupXI?from_tab_name=main" class="contact-link" target="_blank" rel="noopener">
+                        <span class="contact-icon">🎵</span>
+                        <span class="contact-text">抖音</span>
+                    </a>
+                    <a href="https://www.xiaohongshu.com/user/profile/601cef910000000001000d61?channel_type=web_search_result_notes&xsec_token=AB2u8J9XyFnwEcfNgQnKEcXfSRNhQDJeJsTziQD8sPVPs%3D&xsec_source=pc_note" class="contact-link" target="_blank" rel="noopener">
+                        <span class="contact-icon">📕</span>
+                        <span class="contact-text">小红书</span>
+                    </a>
+                    <a href="mailto:1255715117@qq.com" class="contact-link">
+                        <span class="contact-icon">✉️</span>
+                        <span class="contact-text">Email</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© 2024 Bu Xiao. 探索不息，进化不止。</p>
+            <p class="footer-note">本网站采用纯 HTML/CSS/JS 构建，部署于 GitHub Pages。</p>
+        </div>
+    </footer>
+
+    <!-- AI 智能工具栏：板烧鸡腿堡 -->
+    <div id="ai-toolbar" class="ai-toolbar">
+        <div class="toolbar-header" id="toolbar-header">
+            <span class="toolbar-title">🍔 板烧鸡腿堡</span>
+            <div class="toolbar-actions">
+                <button class="toolbar-btn toolbar-toggle" aria-label="展开/收起工具栏">
+                    <span class="toggle-icon">▼</span>
+                </button>
+                <button class="toolbar-btn toolbar-close" aria-label="关闭工具栏">
+                    <span class="close-icon">×</span>
+                </button>
+            </div>
+        </div>
+        <div class="toolbar-content">
+            <div class="toolbar-buttons">
+                <button class="toolbar-btn" data-action="theme-toggle" aria-label="切换主题">
+                    <span class="btn-icon">🌓</span>
+                    <span class="btn-text">主题</span>
+                </button>
+                <button class="toolbar-btn" data-action="scroll-top" aria-label="回到顶部">
+                    <span class="btn-icon">⬆️</span>
+                    <span class="btn-text">顶部</span>
+                </button>
+                <button class="toolbar-btn" data-action="share" aria-label="分享网站">
+                    <span class="btn-icon">📤</span>
+                    <span class="btn-text">分享</span>
+                </button>
+                <button class="toolbar-btn" data-action="chat-toggle" aria-label="打开聊天">
+                    <span class="btn-icon">💬</span>
+                    <span class="btn-text">聊天</span>
+                </button>
+            </div>
+            <div class="chat-interface" id="chat-interface">
+                <div class="chat-messages" id="chat-messages">
+                    <div class="chat-message bot-message">
+                        <div class="message-content">嘿，我是板烧鸡腿堡！一个AI助手。有什么关于AI、技术或这个网站的问题吗？</div>
+                        <div class="message-time">刚刚</div>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="chat-input" placeholder="输入消息..." maxlength="200">
+                    <button id="chat-send" class="chat-send-btn" aria-label="发送消息">发送</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 脚本引入 -->
+    <script src="script.js"></script>
+    <script src="toolbar.js"></script>
+    <script src="chatbot.js"></script>
+</body>
+</html>

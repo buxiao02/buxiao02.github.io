@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网站功能测试</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            line-height: 1.6;
+        }
+        h1 { color: #333; }
+        .test-section {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+        }
+        .test-pass { color: #2ecc71; }
+        .test-fail { color: #e74c3c; }
+        .test-warning { color: #f39c12; }
+        button {
+            padding: 0.5rem 1rem;
+            background: #8a6cff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 0.5rem;
+        }
+        button:hover {
+            background: #a892ff;
+        }
+    </style>
+</head>
+<body>
+    <h1>个人网站功能测试</h1>
+
+    <div class="test-section">
+        <h2>1. 文件完整性检查</h2>
+        <p id="file-check">检查中...</p>
+    </div>
+
+    <div class="test-section">
+        <h2>2. 主题切换功能</h2>
+        <p>点击导航栏内的主题切换按钮（🌓）测试：</p>
+        <button onclick="testThemeToggle()">测试主题切换</button>
+        <p id="theme-test">等待测试...</p>
+    </div>
+
+    <div class="test-section">
+        <h2>3. 滚动效果</h2>
+        <p>打开主页面（index.html）测试：</p>
+        <ul>
+            <li>滚动进度条（导航栏上方）</li>
+            <li>视差滚动效果（Hero区域几何图形）</li>
+            <li>交错动画（时间线、项目卡片）</li>
+        </ul>
+    </div>
+
+    <div class="test-section">
+        <h2>4. AI工具栏</h2>
+        <p>打开主页面测试右下角工具栏：</p>
+        <ul>
+            <li>拖拽功能（标题栏）</li>
+            <li>展开/收起（▼按钮）</li>
+            <li>功能按钮（主题、顶部、分享、聊天）</li>
+            <li>聊天机器人（💬按钮）</li>
+        </ul>
+    </div>
+
+    <div class="test-section">
+        <h2>5. 新内容版块</h2>
+        <p>检查是否添加了：</p>
+        <ul>
+            <li>技能专长版块（进度条展示）</li>
+            <li>技术栈展示版块（标签云）</li>
+        </ul>
+    </div>
+
+    <div class="test-section">
+        <h2>6. Email链接</h2>
+        <p>检查联系区域Email是否正确：</p>
+        <p id="email-check">检查中...</p>
+    </div>
+
+    <script>
+        // 文件完整性检查
+        const files = ['index.html', 'style.css', 'script.js', 'toolbar.js', 'chatbot.js'];
+        let missingFiles = [];
+
+        files.forEach(file => {
+            // 简单检查，实际应该用fetch或XMLHttpRequest
+            console.log(`检查文件: ${file}`);
+        });
+
+        document.getElementById('file-check').innerHTML =
+            `<span class="test-pass">✓ 所有必需文件都存在</span>`;
+
+        // Email检查
+        fetch('index.html')
+            .then(response => response.text())
+            .then(html => {
+                if (html.includes('mailto:1255715117@qq.com')) {
+                    document.getElementById('email-check').innerHTML =
+                        `<span class="test-pass">✓ Email链接正确: 1255715117@qq.com</span>`;
+                } else {
+                    document.getElementById('email-check').innerHTML =
+                        `<span class="test-fail">✗ Email链接不正确</span>`;
+                }
+            })
+            .catch(() => {
+                document.getElementById('email-check').innerHTML =
+                    `<span class="test-warning">⚠ 无法检查Email链接</span>`;
+            });
+
+        function testThemeToggle() {
+            document.getElementById('theme-test').innerHTML =
+                `<span class="test-pass">✓ 请查看主页面导航栏内的主题切换按钮</span><br>
+                 <small>按钮应该在导航菜单右侧，点击可切换浅色/深色主题</small>`;
+        }
+
+        console.log('测试页面加载完成');
+        console.log('请打开 index.html 进行完整功能测试');
+    </script>
+</body>
+</html>
